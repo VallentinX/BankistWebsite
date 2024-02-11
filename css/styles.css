@@ -1,0 +1,1029 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --bkg-color: #f3f3f3;
+  --secnd-bkg-color: #37383d;
+
+  --primary-color: #5ec576;
+  --secondary-color: #ffcb03;
+  --third-color: #ff585f;
+
+  --dark-primary-color: #4bbb7d;
+  --dark-secondary-color: #ffbb00;
+  --dark-third-color: #fd424b;
+
+  --overlay: #000000aa;
+  --border-btm: 1px solid #3a3a3a33;
+
+  --primary-gradient: linear-gradient(to top left, #ff585f, #ffcb03, #5ec576);
+
+  --transition: 350ms ease-in-out;
+}
+body {
+  width: 100%;
+  min-width: 260px;
+  /* max-width: 1200px; */
+  height: 100%;
+  margin: 0 auto;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  position: relative;
+  background: var(--bkg-color);
+}
+div.cookie {
+  height: 100%;
+  border-bottom: var(--border-btm);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 15px;
+  background: var(--secnd-bkg-color);
+}
+div.cookie p {
+  width: 90%;
+  font-size: 12px;
+  color: #fff;
+}
+div.cookie button {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 5px 15px;
+  border-radius: 50px;
+  background: var(--primary-gradient);
+  border: none;
+  color: #fff;
+  transition: var(--transition);
+  cursor: pointer;
+}
+div.cookie button:hover {
+  transform: scale(1.05);
+}
+header.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 100px;
+  border-bottom: var(--border-btm);
+  position: relative;
+}
+header nav.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px;
+  border-bottom: var(--border-btm);
+}
+header nav.nav:hover {
+  color: #00000055;
+}
+header nav.sticky {
+  width: 90%;
+  position: fixed;
+  background-color: #ffffffee;
+  z-index: 1;
+  left: 0;
+}
+header nav.nav a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition);
+}
+header nav.nav a:hover {
+  color: #000;
+}
+header nav.nav:hover a img {
+  opacity: 0.5;
+}
+header nav.nav a img {
+  width: 30px;
+  height: 30px;
+  transition: var(--transition);
+}
+header nav.nav a:hover img {
+  opacity: 1;
+}
+header nav.nav ul.nav_links {
+  display: none;
+}
+header nav.nav:hover button.opn-mbl-mn {
+  color: #00000055;
+}
+header nav.nav button.opn-mbl-mn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  color: #000;
+}
+header nav.nav button.opn-mbl-mn:hover {
+  color: var(--primary-color);
+}
+header nav.nav button.opn-mbl-mn svg {
+  width: 40px;
+  height: 40px;
+}
+header nav.nav div.mobile-menu-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  transform: translateX(0);
+  transition: transform var(--transition);
+}
+header nav.nav div.menu-is-close {
+  display: none;
+}
+header nav.nav div.mobile-menu-window {
+  background-color: var(--bkg-color);
+  /* width: 60%; */
+  height: 450px;
+  box-shadow: #000 20px 0px 20px 0px;
+  border-radius: 0px 0px 0px 50px;
+}
+header nav.nav div.mobile-menu-window button {
+  margin: 10px 0px 0px 10px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #00000033;
+  border-radius: 100px;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+header nav.nav div.mobile-menu-window button:hover {
+  border: 1px solid var(--primary-color);
+  stroke: var(--primary-color);
+}
+header nav.nav div.mobile-menu-window ul.nav_links {
+  width: 100%;
+  height: 100%;
+  display: contents;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 50px 20px;
+}
+header nav.nav div.mobile-menu-window li {
+  list-style: none;
+}
+header nav.nav div.mobile-menu-window a {
+  font-size: 15px;
+}
+header nav.nav div.mobile-menu-window a:hover {
+  color: var(--primary-color);
+}
+header div.header_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 75px 15px 0px;
+}
+header div.header_title div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+header div.header_title h1 {
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  width: 150px;
+}
+header div.header_title span {
+  position: relative;
+  color: #fff;
+}
+header div.header_title span.highlight::after {
+  display: flex;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  background: var(--primary-gradient);
+  height: 100%;
+  width: 100%;
+}
+header div.header_title img {
+  width: 250px;
+}
+header div.header_title h4 {
+  font-size: 11px;
+  font-weight: 500;
+}
+header div.header_title button {
+  display: inline-block;
+  background: none;
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--primary-color);
+  border: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+section.section {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  border-bottom: var(--border-btm);
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+section.section-hidden {
+  opacity: 0;
+  transform: translateY(100px);
+}
+section.section div.section_title {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+section.section div.section_title h2 {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+section.section div.section_title h3 {
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+section.section div.features {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+section.section div.features div.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+section.section div.features div.second-future {
+  flex-direction: column-reverse;
+}
+section.section div.features img {
+  width: 100%;
+}
+section.section div.features img.lazy-img {
+  filter: blur(20px);
+}
+section.section div.features div.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section.section div.features div.info div {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background-color: #5ec5763a;
+  border: 1px solid var(--primary-color);
+}
+section.section div.features div.info svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--primary-color);
+}
+section.section div.features div.info h5 {
+  font-size: 15px;
+}
+section.section div.features div.info p {
+  font-size: 13px;
+  color: #666;
+}
+section.section div.operations_tab-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: absolute;
+  top: 110px;
+  left: 25px;
+}
+section.section div.operations_tab-container button {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  font-family: inherit;
+  padding: 5px 0px;
+  color: #fff;
+  background: var(--primary-gradient);
+  font-weight: 700;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all var(--transition);
+  width: 75px;
+}
+section.section div.operations_tab-container button:hover {
+  transform: scale(1.05);
+}
+section.section
+  div.operations_tab-container
+  button.operations_tab-1.operations_tab-active {
+  background: transparent;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  transform: scale(1.05);
+}
+section.section
+  div.operations_tab-container
+  button.operations_tab-2.operations_tab-active {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  transform: scale(1.05);
+}
+section.section
+  div.operations_tab-container
+  button.operations_tab-3.operations_tab-active {
+  background: transparent;
+  color: var(--third-color);
+  border: 1px solid var(--third-color);
+  transform: scale(1.05);
+}
+section.section div.operations {
+  background-color: #fff;
+}
+section.section div.operations div.operations_content {
+  display: none;
+}
+section.section div.operations div.operations_content-active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px 20px;
+  gap: 15px;
+}
+section.section div.operations_content div.operations_icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+}
+section.section div.operations_content div.operations_icon-1 {
+  background-color: #ffcb033a;
+}
+section.section div.operations_content div.operations_icon-2 {
+  background-color: #5ec5763a;
+}
+section.section div.operations_content div.operations_icon-3 {
+  background-color: #fd424b3a;
+}
+section.section div.operations_content svg {
+  width: 30px;
+  height: 30px;
+}
+section.section div.operations_content-1 svg {
+  fill: var(--secondary-color);
+}
+section.section div.operations_content-2 svg {
+  fill: var(--primary-color);
+}
+section.section div.operations_content-3 svg {
+  fill: var(--third-color);
+}
+section.section div.operations_content div.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+section.section div.operations_content h5 {
+  font-size: 15px;
+  font-weight: 500;
+}
+section.section div.operations_content p {
+  font-size: 13px;
+}
+section.section-rate div.section_title h2 {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+section.section-rate div.section_title h3 {
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+section.section-rate div.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  background-color: #fff;
+  height: 525px;
+  position: relative;
+  overflow: hidden;
+}
+section.section-rate div.slider div.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s;
+}
+section.section-rate div.slider div.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 0px 15px;
+  position: relative;
+}
+section.section-rate div.slider h5 {
+  font-size: 15px;
+  font-weight: 500;
+}
+section.section-rate div.slider blockquote {
+  font-size: 13px;
+  color: #666;
+}
+section.section-rate div.slider address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+section.section-rate div.slider img {
+  width: 100px;
+  border-radius: 50%;
+}
+section.section-rate div.slider h6 {
+  font-size: 15px;
+}
+section.section-rate div.slider p {
+  font-size: 13px;
+}
+section.section-rate div.slider button.slider_btn {
+  display: none;
+}
+section.section-rate div.slider div.dots {
+  position: absolute;
+  top: 480px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+section.section-rate div.slider button.dots_dot {
+  border: none;
+  background-color: #bbb;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+section.section-rate div.slider button.dots_dot:last-child {
+  margin: 0;
+}
+section.section-rate div.slider button.active-dot {
+  background-color: #666;
+}
+section.section-sign-up {
+  background-color: var(--secnd-bkg-color);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #4f4f4f;
+}
+section.section-sign-up button.btn-show-modal {
+  background: var(--primary-gradient);
+  width: 75%;
+  height: 25px;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  transition: var(--transition);
+}
+section.section-sign-up button.btn-show-modal:hover {
+  transform: scale(1.05);
+}
+div.overlay-modal {
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  transform: translateX(0);
+  transition: transform var(--transition);
+}
+div.hidden {
+  display: none;
+}
+div.overlay-modal div.modal {
+  width: 250px;
+  background-color: var(--bkg-color);
+  padding: 25px 15px;
+  border-radius: 25px;
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 15px 15px 1px #000;
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+div.overlay-modal div.modal button.btn-close-modal {
+  width: 25px;
+  height: 25px;
+  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #00000055;
+  border-radius: 50px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+div.overlay-modal div.modal button.btn-close-modal:hover {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+div.overlay-modal div.modal h2.modal_header {
+  width: 250px;
+  font-size: 15px;
+  line-height: 1.5;
+  position: relative;
+}
+div.overlay-modal div.modal span.highlight {
+  position: relative;
+  color: #fff;
+}
+div.overlay-modal div.modal span.highlight::after {
+  display: flex;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  background: var(--primary-gradient);
+  height: 100%;
+  width: 100%;
+}
+div.overlay-modal div.modal form.modal_form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+div.overlay-modal div.modal form.modal_form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+div.overlay-modal div.modal form.modal_form label {
+  font-size: 15px;
+  font-weight: 500;
+}
+div.overlay-modal div.modal form.modal_form input {
+  height: 25px;
+  font-size: 15px;
+  padding: 5px 15px;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  outline: none;
+}
+div.overlay-modal div.modal form.modal_form button {
+  width: 150px;
+  font-size: 15px;
+  border-radius: 50px;
+  background: var(--primary-gradient);
+  border: none;
+  color: #fff;
+  padding: 5px;
+  align-self: center;
+  transition: var(--transition);
+  cursor: pointer;
+}
+div.overlay-modal div.modal form.modal_form button:hover {
+  transform: scale(1.05);
+}
+footer.footer {
+  background-color: var(--secnd-bkg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 15px;
+}
+footer.footer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+footer.footer li {
+  list-style: none;
+}
+footer.footer li a {
+  font-size: 12px;
+  color: #eee;
+  text-decoration: none;
+}
+footer.footer img {
+  width: 50px;
+  height: 50px;
+}
+footer.footer p {
+  font-size: 12px;
+  color: #aaa;
+}
+footer.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+/********** Tablet ( 480px - 768px ) **********/
+@media screen and (min-width: 480px) {
+  /* body {} */
+  div.cookie {
+    padding: 25px;
+  }
+  div.cookie p {
+    text-align: left;
+    width: 85%;
+    font-size: 15px;
+  }
+  div.cookie button {
+    font-size: 20px;
+  }
+  /* header.header {} */
+  header nav.nav {
+    padding: 10px 25px;
+  }
+  header nav.sticky {
+    width: 93.3%;
+  }
+  header nav.nav a {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  header nav.nav a img {
+    width: 45px;
+    height: 45px;
+  }
+  header nav.nav button.opn-mbl-mn {
+    width: 45px;
+    height: 45px;
+  }
+  header nav.nav button.opn-mbl-mn svg {
+    width: 45px;
+    height: 45px;
+  }
+  header nav.nav div.mobile-menu-window {
+    height: 600px;
+    width: 350px;
+  }
+  header nav.nav div.mobile-menu-window button {
+    margin: 15px 0px 0px 15px;
+    width: 40px;
+    height: 40px;
+  }
+  header nav.nav div.mobile-menu-window ul.nav_links {
+    align-items: center;
+    gap: 30px;
+    margin: 75px 20px;
+  }
+  header nav.nav div.mobile-menu-window a {
+    font-size: 18px;
+  }
+  header div.header_title {
+    flex-direction: column;
+    align-items: start;
+    padding: 150px 25px 0px;
+  }
+  header div.header_title div {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header div.header_title h1 {
+    font-size: 25px;
+    text-align: center;
+    width: 250px;
+  }
+  header div.header_title img {
+    width: 350px;
+  }
+  header div.header_title h4 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  header div.header_title button {
+    font-size: 20px;
+  }
+  section.section {
+    padding: 35px 25px;
+  }
+  section.section div.section_title {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  section.section div.section_title h2 {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  section.section div.section_title h3 {
+    font-size: 16px;
+  }
+  section.section div.features div.feature {
+    flex-direction: row;
+  }
+  section.section div.features img {
+    width: 250px;
+    height: 150px;
+  }
+  section.section div.features div.info {
+    gap: 0;
+  }
+  section.section div.features div.info h5 {
+    font-size: 15px;
+  }
+  section.section div.operations_tab-container {
+    top: 120px;
+    left: 100px;
+  }
+  section.section div.operations_tab-container button {
+    font-size: 16px;
+    padding: 5px;
+    width: 100px;
+  }
+  section.section div.operations div.operations_content-active {
+    flex-direction: row;
+    align-items: start;
+    padding: 60px 25px 20px;
+    gap: 25px;
+  }
+  section.section div.operations_content div.container {
+    width: 500px;
+  }
+  section.section div.operations_content h5 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  section.section div.operations_content p {
+    font-size: 15px;
+  }
+  section.section-rate div.slider {
+    height: 500px;
+  }
+  section.section-rate div.slider div.slide {
+    top: 10px;
+  }
+  section.section-rate div.slider div.testimonial {
+    width: 450px;
+  }
+  section.section-rate div.slider h5 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  section.section-rate div.slider blockquote {
+    font-size: 15px;
+  }
+  section.section-rate div.slider h6,
+  section.section-rate div.slider p {
+    font-size: 16px;
+  }
+  section.section-rate div.slider button.slider_btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #eee;
+    cursor: pointer;
+    font-size: 25px;
+    transition: var(--transition);
+    border: 1px solid #999;
+    color: #999;
+    top: 350px;
+  }
+  section.section-rate div.slider button.slider_btn:hover {
+    border: 1px solid #111;
+    color: #111;
+  }
+  section.section-rate div.slider button.slider_btn-right {
+    right: 25px;
+  }
+  section.section-rate div.slider button.slider_btn-left {
+    left: 25px;
+  }
+  section.section-rate div.slider div.dots {
+    position: absolute;
+    top: 470px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  section.section-sign-up button.btn-show-modal {
+    background-color: var(--primary-color);
+    width: 250px;
+    height: 35px;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+  }
+  div.overlay-modal div.modal {
+    width: 410px;
+    padding: 30px 25px;
+  }
+  div.overlay-modal div.modal button.btn-close-modal {
+    width: 35px;
+    height: 35px;
+    font-size: 40px;
+  }
+  div.overlay-modal div.modal h2.modal_header {
+    width: 400px;
+    font-size: 25px;
+  }
+  div.overlay-modal div.modal form.modal_form div {
+    flex-direction: row;
+  }
+  div.overlay-modal div.modal form.modal_form label {
+    font-size: 20px;
+  }
+  div.overlay-modal div.modal form.modal_form input {
+    height: 30px;
+    font-size: 20px;
+  }
+  div.overlay-modal div.modal form.modal_form button {
+    width: 170px;
+    font-size: 25px;
+  }
+  footer.footer {
+    gap: 25px;
+    padding: 25px 25px;
+  }
+  footer.footer ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  footer.footer li a {
+    font-size: 15px;
+  }
+  footer.footer img {
+    width: 50px;
+    height: 50px;
+  }
+  footer.footer p {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+/********** Desktop ( 768px - 1158px ) **********/
+@media screen and (min-width: 768px) {
+  div.cookie p {
+    width: 90%;
+    text-align: center;
+  }
+  header nav.sticky {
+    width: 96.5%;
+  }
+  header nav.nav ul.nav_links {
+    display: contents;
+  }
+  header nav.nav button.opn-mbl-mn {
+    display: none;
+  }
+  header nav.nav ul.nav_links {
+    display: flex;
+    gap: 25px;
+  }
+  header nav.nav ul.nav_links li {
+    list-style: none;
+  }
+  header nav.nav ul.nav_links li a {
+    font-size: 18px;
+  }
+  header nav.nav:hover ul.nav_links a.nav_link-btn {
+    opacity: 0.5;
+  }
+  header nav.nav ul.nav_links a.nav_link-btn {
+    background: var(--primary-gradient);
+    border-radius: 50px;
+    padding: 2px 15px;
+    color: #fff;
+  }
+  header nav.nav ul.nav_links a.nav_link-btn:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  header div.header_title {
+    padding: 200px 25px 50px;
+  }
+  header div.header_title h1 {
+    font-size: 35px;
+    width: 350px;
+  }
+  header div.header_title img {
+    width: 600px;
+  }
+  header div.header_title h4 {
+    font-size: 20px;
+  }
+  header div.header_title button {
+    font-size: 22px;
+  }
+  section.section div.operations_tab-container {
+    left: 20%;
+  }
+  section.section div.operations div.operations_content-active {
+    padding: 80px 50px 20px;
+  }
+  section.section div.operations_content div.container {
+    width: 100%;
+  }
+  section.section-rate div.slider {
+    height: 400px;
+  }
+  section.section-rate div.slider div.testimonial {
+    width: 800px;
+    gap: 25px;
+  }
+  section.section-rate div.slider button.slider_btn {
+    width: 35px;
+    height: 35px;
+    font-size: 25px;
+    top: 300px;
+  }
+  section.section-rate div.slider div.dots {
+    top: 365px;
+  }
+  div.overlay-modal div.modal {
+    padding: 40px 50px;
+    width: 600px;
+  }
+}
